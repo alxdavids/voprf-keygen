@@ -2,11 +2,12 @@
 
 Generates a new (V)OPRF key for the secp256r1 curve, along with a public
 commitment value `H` corresponding to `H = kG`, where `G` is the curves
-generator.
+generator. The commitment value is signed using a provided ECDSA signing
+key.
 
 ## Quickstart
 
-Generate (V)OPRF key and commitment file using test data:
+Generate (V)OPRF key and commitment file using a test ECDSA key:
 ```
 go run main.go --ecdsa-key-path=testdata/test.ecdsa.key.pem
 ```
